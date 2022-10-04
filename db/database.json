@@ -1,6 +1,10 @@
 {
   "development": {
-    "use_env_variable": "DATABASE_URL"
+    "username": "bee",
+    "password": "111",
+    "database": "socks2022",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   },
   "test": {
     "username": "root",
