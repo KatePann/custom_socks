@@ -13,6 +13,7 @@ const renderTemplate = require('./src/lib/RenderTemplate');
 
 const HomeRouter = require('./src/routes/HomeRoutes'); // подключаем мидлварку
 const BasketRoutes = require('./src/routes/BasketRoutes');
+const PersonalRouter = require('./src/routes/PersonalAccRoutes');
 
 const { SESSION_SECRET } = process.env;
 
@@ -40,6 +41,7 @@ app.use(session(sessionConfig));// подключение мидлвара дл�
 
 app.use('/', HomeRouter);// подключаем мидлварку
 app.use('/basket', BasketRoutes);
+app.use('/personal', PersonalRouter);
 
 const PORT = process.env.PORT || 3001;
 

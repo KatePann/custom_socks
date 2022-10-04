@@ -31,7 +31,7 @@ function Layout({ children }) {
                       <a className="nav-link" href="#">Избранное</a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Личный кабинет</a>
+                      <a className="nav-link" href="/personal">Личный кабинет</a>
                     </li>
                     <li className="nav-item">
                       <a className="nav-link" href="/basket">Корзина</a>
@@ -135,6 +135,7 @@ function Layout({ children }) {
 
         { children }
       </body>
+      
     </html>
   );
 }
