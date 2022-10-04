@@ -39,7 +39,7 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));// подключение мидлвара для куки
 
-app.use('/', HomeRouter);// подключаем мидлварку
+app.use('/', HomeRouter);// подключаем мидлварки
 app.use('/basket', BasketRoutes);
 app.use('/personal', PersonalRouter);
 

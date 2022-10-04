@@ -21,8 +21,8 @@ function Layout({ children }) {
             <div className="container-fluid">
               <a className="navbar-brand" href="/">TRIPLE SOCKS</a>
 
-              <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav">
+              {/* <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div className="navbar-nav"> */}
                   <ul className="nav justify-content-end">
                     <li className="nav-item">
                       <a className="nav-link" href="#">Генератор носков</a>
@@ -40,8 +40,8 @@ function Layout({ children }) {
                       <a className="nav-link" href="/logout">Выход</a>
                     </li>
                   </ul>
-                </div>
-              </div>
+                {/* </div>
+              </div> */}
             </div>
           </nav>
         </header>
@@ -75,7 +75,7 @@ function Layout({ children }) {
                     <a href="#!" className="text-reset">Избранное</a>
                   </p>
                   <p>
-                    <a href="#!" className="text-reset">Личный кабинет</a>
+                    <a href="/personal" className="text-reset">Личный кабинет</a>
                   </p>
                   <p>
                     <a href="/basket" className="text-reset">Корзина</a>
@@ -114,12 +114,12 @@ function Layout({ children }) {
                   <p>
                     <i className="fas fa-phone me-3 text-secondary" />
                     {' '}
-                    + 7 234 567 88 88
+                    + 7 934 567 88 88
                   </p>
                   <p>
                     <i className="fas fa-print me-3 text-secondary" />
                     {' '}
-                    + 7 234 567 99 99
+                    + 7 934 567 99 99
                   </p>
                 </div>
 
@@ -128,7 +128,7 @@ function Layout({ children }) {
             </div>
           </section>
 
-          <div className="text-center p-4" style={{ backgroundColor: 'rgba(196, 208, 221)' }}>
+          <div className="text-center p-4" style={{ backgroundColor: '#e3f2fd' }}>
             <p>TRIPLE SOCKS © 2022. All rights reserved.</p>
           </div>
         </footer>
