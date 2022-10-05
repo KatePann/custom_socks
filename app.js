@@ -47,8 +47,7 @@ app.use('/basket', BasketRoutes);
 app.use('/personal', PersonalRouter);
 app.use('/user', UserRouter);
 app.use('/user', UserAut);
-app.use('/', HomeRouter);// подключаем мидлварку
-// app.use('/login', loginRoutes); поменять на актуальную
+
 
 const PORT = process.env.PORT || 3001;
 

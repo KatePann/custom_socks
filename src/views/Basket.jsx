@@ -5,71 +5,87 @@ function Basket() {
   return (
     <Layout>
 
-      <div className="container-xxl js-order final-order">
-        <h3 className="card-title">Корзина </h3>
-        <div>
-          <h5 className="js-total">
-            Стоимость заказа
-            <p className="js-totalPrice" />
-            {' '}
-            руб.
-          </h5>
-          <button type="button" className="btn btn-outline-primary order-make ">
-            Оформить заказ
-          </button>
-        </div>
-
-        <div className="card mb-3" style={{ maxWidth: '540px' }}>
-          <div className="row g-0z ">
-            <div className="col-md-4 ">
-              <img src="#" className="img-fluid rounded-start" alt="..." />
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Товар</th>
+                            <td></td>
+                            <th scope="col" class="text-center">Количество</th>
+                            <th scope="col" class="text-right">Цена</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
+                            <td>Product Name Dada</td>
+                            <td></td>
+                            <td><input class="form-control" type="text" value="1" /></td>
+                            <td class="text-right">124,90 €</td>
+                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
+                            <td>Product Name Toto</td>
+                            <td></td>
+                            <td><input class="form-control" type="text" value="1" /></td>
+                            <td class="text-right">33,90 €</td>
+                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
+                            <td>Product Name Titi</td>
+                            <td></td>
+                            <td><input class="form-control" type="text" value="1" /></td>
+                            <td class="text-right">70,00 €</td>
+                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Итого:</td>
+                            <td class="text-right">255,90 €</td>
+                        </tr>
+                        {/* <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Shipping</td>
+                            <td class="text-right">6,90 €</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong>346,90 €</strong></td>
+                        </tr> */}
+                    </tbody>
+                </table>
             </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <h5 className="card-title">
-                  Цена
-
-                  {' '}
-                  руб.
-                </h5>
-
-                <p className="card-text">название</p>
-                <p className="card-text">
-                  колличество в корзине
-                  <p className="counter">колличество</p>
-                </p>
-                <div
-                  className="btn-group-vertical"
-                  role="group"
-                  aria-label="Vertical button group"
-                >
-                  <p className="info" />
-                  <button
-                    type="button"
-                    className="btn btn-success p-2 border btnPlus-data"
-                  >
-                    +
-
-                    {' '}
-                    добавить товар
-                  </button>
-
-                  <button
-                    type="button"
-                    className="btn btn-warning p-2 border btnMinus"
-                  >
-                    -
-
-                    {' '}
-                    убрать товар
-                  </button>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                {/* <div class="col-sm-12  col-md-6">
+                    <button class="btn btn-block btn-light">Continue Shopping</button>
+                </div> */}
+                <div class="col-sm-12 col-md-6 text-right">
+                    <button class="btn btn-lg btn-block btn-success text-uppercase">Оплатить</button>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
+    </div>
+</div>
 
-      </div>
 
     </Layout>
   );
