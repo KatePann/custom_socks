@@ -141,6 +141,7 @@ function Layout({ children }) {
       
     </html>
   );
+  { children }
 }
 
 module.exports = Layout;
