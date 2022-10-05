@@ -39,6 +39,9 @@ function Layout({ children }) {
                       <a className="nav-link" href="#">Корзина</a>
                     </li>
                     <li className="nav-item">
+                      <a className="nav-link" href="/user/reg">Регистрация</a>
+                    </li>
+                    <li className="nav-item">
                       <a className="nav-link" href="#">Выход</a>
                     </li>
                   </ul>
@@ -48,6 +51,7 @@ function Layout({ children }) {
           </nav>
         </header>
 
+        { children }
         <footer id="footer" className="footer-1">
           <div className="main-footer widgets-dark typo-light">
             <div className="container">
@@ -111,7 +115,6 @@ function Layout({ children }) {
           </div>
         </footer>
 
-        { children }
       </body>
     </html>
   );

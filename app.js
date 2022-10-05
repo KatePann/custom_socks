@@ -12,6 +12,7 @@ const { sequelize } = require('./db/models');
 const renderTemplate = require('./src/lib/RenderTemplate');
 
 const HomeRouter = require('./src/routes/HomeRoutes'); // подключаем мидлварку
+const UserRouter = require('./src/routes/UserRoutes');
 
 const { SESSION_SECRET } = process.env;
 
@@ -21,6 +22,7 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, './public/'))); // подключаем css
 app.use(express.json()); // мидлвар на чтение телa постов
 app.use(express.urlencoded({ extended: true })); // мидлвар на чтение телa постов
+
 
 //  Создание конфига для куки
 const sessionConfig = {
@@ -37,6 +39,7 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));// подключение мидлвара для куки
 
+app.use('/user', UserRouter);
 app.use('/', HomeRouter);// подключаем мидлварку
 // app.use('/login', loginRoutes); поменять на актуальную
 
