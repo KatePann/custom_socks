@@ -134,11 +134,12 @@ function Layout({ children, mur }) {
             <p>TRIPLE SOCKS © 2022. All rights reserved.</p>
           </div>
         </footer>
-{children}
+        { children }
       </body>
       
     </html>
   );
+  
 }
 
 module.exports = Layout;
