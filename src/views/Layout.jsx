@@ -37,11 +37,10 @@ function Layout({ children }) {
                       <a className="nav-link" href="/basket">Корзина</a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="/logout">Выход</a>
                       <a className="nav-link" href="/user/reg">Регистрация</a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Выход</a>
+                      <a className="nav-link" href="/logout">Выход</a>
                     </li>
                   </ul>
                 {/* </div>
@@ -136,12 +135,12 @@ function Layout({ children }) {
             <p>TRIPLE SOCKS © 2022. All rights reserved.</p>
           </div>
         </footer>
-
+        { children }
       </body>
       
     </html>
   );
-  { children }
+  
 }
 
 module.exports = Layout;
