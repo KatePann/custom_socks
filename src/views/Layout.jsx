@@ -10,6 +10,7 @@ function Layout({ children }) {
         {/* подключаем бутстрап */}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossOrigin="anonymous" />
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossOrigin="anonymous" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
         {/* подключаем css файлы */}
         <link rel="stylesheet" href="../../css/index.css" />
 
@@ -19,7 +20,7 @@ function Layout({ children }) {
         <header>
           <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
-              <a className="navbar-brand" href="/">TRIPLE SOCKS</a>
+              <a className="navbar-brand" href="/">Главная</a>
 
               {/* <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav"> */}
@@ -51,7 +52,7 @@ function Layout({ children }) {
 
         <footer>
 
-          <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" />
+        {/* <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" /> */}
 
           <section className="">
             <div className="container text-center text-md-start mt-5">
@@ -105,25 +106,16 @@ function Layout({ children }) {
                 <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                   <h6 className="text-uppercase fw-bold mb-4">Контакты</h6>
-                  <p>
-                    <i className="fas fa-home me-3 text-secondary" />
-                    {' '}
-                    Москва, ул. Центральная, д.10
-                  </p>
-                  <p>
-                    <i className="fas fa-envelope me-3 text-secondary" />
-                    info@socks.com
-                  </p>
-                  <p>
-                    <i className="fas fa-phone me-3 text-secondary" />
-                    {' '}
-                    + 7 934 567 88 88
-                  </p>
-                  <p>
-                    <i className="fas fa-print me-3 text-secondary" />
-                    {' '}
-                    + 7 934 567 99 99
-                  </p>
+                    <p>
+                      <a href="#!" className="text-reset">Москва, ул. Центральная, д.10</a>
+                    </p>
+                    <p>
+                      <a href="#!" className="text-reset"> info@socks.com</a>
+                    </p>
+                    <p>
+                      <a href="#!" className="text-reset">+ 7 934 567 88 88</a>
+                    </p>
+          
                 </div>
 
               </div>
@@ -134,6 +126,7 @@ function Layout({ children }) {
           <div className="text-center p-4" style={{ backgroundColor: '#e3f2fd' }}>
             <p>TRIPLE SOCKS © 2022. All rights reserved.</p>
           </div>
+          
         </footer>
         { children }
       </body>
