@@ -9,10 +9,9 @@ const Home = require('../views/Home');
 
 router.get('/', (req, res) => {
   // async
-//   const { newUser } = req.session;
-//   const allPosts = await entry.findAll({ raw: true });
-//   renderTemplate(Home, { allPosts, newUser }, res);
-  renderTemplate(Home, null, res);
+  const { mur } = req.session;
+
+  renderTemplate(Home, { mur }, res);
 });
 
 module.exports = router;

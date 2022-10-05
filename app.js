@@ -15,6 +15,7 @@ const HomeRouter = require('./src/routes/HomeRoutes'); // подключаем �
 const BasketRoutes = require('./src/routes/BasketRoutes');
 const PersonalRouter = require('./src/routes/PersonalAccRoutes');
 const UserRouter = require('./src/routes/UserRoutes');
+const UserAut = require('./src/routes/UserAutRout');
 
 const { SESSION_SECRET } = process.env;
 
@@ -45,6 +46,7 @@ app.use('/', HomeRouter);// подключаем мидлварки
 app.use('/basket', BasketRoutes);
 app.use('/personal', PersonalRouter);
 app.use('/user', UserRouter);
+app.use('/user', UserAut);
 app.use('/', HomeRouter);// подключаем мидлварку
 // app.use('/login', loginRoutes); поменять на актуальную
 
@@ -52,8 +54,8 @@ const PORT = process.env.PORT || 3001;
 
 app.get('/logout', (req, res) => { // делаем логаут
   try {
-    console.log(req.session.newUser);
-    if (req.session.newUser) {
+    console.log(req.session.mur);
+    if (req.session.mur) {
       req.session.destroy(() => { // убиваем сессию
         res.clearCookie('SocksCookie');// убиваем куки при выходе
         res.redirect('/');

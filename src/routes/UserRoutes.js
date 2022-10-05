@@ -12,12 +12,15 @@ router.get('/reg', (req, res) => {
 router.post('/reg', async (req, res) => {
   try {
     const {
-      name, surname, phone, email, password,
+      name, surname, patronymic, phone, email, adress, password,
     } = req.body;
-    await User.create({
-      name, surname, phone_number: Number(phone), email, password,
+    const newUs = await User.create({
+      name, surname, patronymic, phone_number: Number(phone), email, home_adress: adress, password,
     });
-    res.redirect('/');
+    req.session.mur = newUs.name;
+    req.session.save(() => {
+      res.redirect('/');
+    });
   } catch (error) {
     console.log('/reg errror', error);
   }

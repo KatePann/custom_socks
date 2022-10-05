@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Reg() {
+module.exports = function Reg( ) {
   return (
     <Layout>
       <form method="POST" action="/user/reg">
@@ -14,6 +14,10 @@ module.exports = function Reg() {
           <input name="surname" type="lastname" className="form-control" id="exampleInputLastName" />
         </div>
         <div className="mb-3">
+          <label htmlFor="exampleInputPatronymic" className="form-label">Patronymic</label>
+          <input name="patronymic" type="patronymic" className="form-control" id="exampleInputPatronymic" />
+        </div>
+        <div className="mb-3">
           <label htmlFor="exampleInputPhone" className="form-label">Phone</label>
           <input name="phone" type="number" className="form-control" id="exampleInputPhone" />
         </div>
@@ -21,6 +25,10 @@ module.exports = function Reg() {
           <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
           <input name="email" type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
           <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="exampleInputAdress" className="form-label">Adress</label>
+          <input name="adress" type="adress" className="form-control" id="exampleInputAdress" />
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputPassword1" className="form-label">Password</label>

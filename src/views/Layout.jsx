@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Layout({ children }) {
+function Layout({ children, mur }) {
   return (
     <html lang="en">
       <head>
@@ -24,25 +24,23 @@ function Layout({ children }) {
               {/* <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav"> */}
                   <ul className="nav justify-content-end">
-                    <li className="nav-item">
-                      <a className="nav-link" href="#">Генератор носков</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="#">Избранное</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="/personal">Личный кабинет</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="/basket">Корзина</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="/logout">Выход</a>
-                      <a className="nav-link" href="/user/reg">Регистрация</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="#">Выход</a>
-                    </li>
+                   {mur?( <><li className="nav-item">
+                  <a className="nav-link" href="#">Генератор носков</a>
+                </li><li className="nav-item">
+                    <a className="nav-link" href="#">Избранное</a>
+                  </li><li className="nav-item">
+                    <a className="nav-link" href="/personal">Личный кабинет</a>
+                  </li><li className="nav-item">
+                    <a className="nav-link" href="/basket">Корзина</a>
+                  </li><li className="nav-item">
+                    <a className="nav-link" href="/logout">Выход</a>
+                  </li></>)
+                    :
+                   ( <><li className="nav-item">
+                    <a className="nav-link" href="/user/reg">Регистрация</a>
+                  </li><li className="nav-item">
+                      <a className="nav-link" href="/user/aut">Авторизация</a>
+                    </li></>)}
                   </ul>
                 {/* </div>
               </div> */}
@@ -136,7 +134,7 @@ function Layout({ children }) {
             <p>TRIPLE SOCKS © 2022. All rights reserved.</p>
           </div>
         </footer>
-
+{children}
       </body>
       
     </html>
