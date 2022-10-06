@@ -19,6 +19,7 @@ const UserAut = require('./src/routes/UserAutRout');
 const FavoritesRoutes = require('./src/routes/FavoritesRoutes');
 const DeleteFavRoutes = require('./src/routes/deleteFavRoutes');
 const deleteBasRoutes = require('./src/routes/deleteBasRoutes');
+const SocksGenerate = require('./src/routes/Generate');
 
 const { SESSION_SECRET } = process.env;
 
@@ -53,6 +54,7 @@ app.use('/user', UserAut);
 app.use('/favorite', FavoritesRoutes);
 app.use('/deleteFav', DeleteFavRoutes);
 app.use('/deleteBas', deleteBasRoutes);
+app.use('/', SocksGenerate);
 
 
 const PORT = process.env.PORT || 3001;
