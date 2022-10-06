@@ -36,7 +36,8 @@ function Basket({mur, total, allSock, myBasket}) {
                             <td className="text-right">{el['Sock.price']} руб.</td>
                             <td className="text-right"><button className="btn btn-sm btn-danger"><i className="fa fa-trash"></i> </button> </td>
                         </tr>
-                        )}
+                        ))}
+                        
                         <tr>
                             <td></td>
                             <td></td>
