@@ -34,10 +34,25 @@ function Basket({mur, total, allSock, myBasket}) {
                             <td></td>
                             <td><input className="form-control" type="text" value="1" /></td>
                             <td className="text-right">{el['Sock.price']} руб.</td>
+                            
                             <td className="text-right"><button className="btn btn-sm btn-danger"><i className="fa fa-trash"></i> </button> </td>
                         </tr>
-                        ))}
-                        
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
+                            <td>Product Name Toto</td>
+                            <td></td>
+                            <td><input className="form-control" type="text" value="1" /></td>
+                            <td className="text-right">33,90 €</td>
+                            <td className="text-right"><button className="btn btn-sm btn-danger"><i className="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
+                            <td>Product Name Titi</td>
+                            <td></td>
+                            <td><input className="form-control" type="text" value="1" /></td>
+                            <td className="text-right">70,00 €</td>
+                            <td className="text-right"><button className="btn btn-sm btn-danger"><i className="fa fa-trash"></i> </button> </td>
+                        </tr>
                         <tr>
                             <td></td>
                             <td></td>
