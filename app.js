@@ -14,6 +14,8 @@ const renderTemplate = require('./src/lib/RenderTemplate');
 const HomeRouter = require('./src/routes/HomeRoutes'); // подключаем мидлварку
 const BasketRoutes = require('./src/routes/BasketRoutes');
 const PersonalRouter = require('./src/routes/PersonalAccRoutes');
+const UserRouter = require('./src/routes/UserRoutes');
+const UserAut = require('./src/routes/UserAutRout');
 
 const { SESSION_SECRET } = process.env;
 
@@ -23,6 +25,7 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, './public/'))); // подключаем css
 app.use(express.json()); // мидлвар на чтение телa постов
 app.use(express.urlencoded({ extended: true })); // мидлвар на чтение телa постов
+
 
 //  Создание конфига для куки
 const sessionConfig = {
@@ -42,13 +45,16 @@ app.use(session(sessionConfig));// подключение мидлвара дл�
 app.use('/', HomeRouter);// подключаем мидлварки
 app.use('/basket', BasketRoutes);
 app.use('/personal', PersonalRouter);
+app.use('/user', UserRouter);
+app.use('/user', UserAut);
+
 
 const PORT = process.env.PORT || 3001;
 
 app.get('/logout', (req, res) => { // делаем логаут
   try {
-    console.log(req.session.newUser);
-    if (req.session.newUser) {
+    console.log(req.session.mur);
+    if (req.session.mur) {
       req.session.destroy(() => { // убиваем сессию
         res.clearCookie('SocksCookie');// убиваем куки при выходе
         res.redirect('/');

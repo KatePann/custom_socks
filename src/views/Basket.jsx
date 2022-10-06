@@ -1,75 +1,70 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Basket() {
+function Basket({mur, total, allSock, myBasket}) {
+    console.log(Boolean(myBasket));
   return (
-    <Layout>
-
-      <div className="container-xxl js-order final-order">
-        <h3 className="card-title">Корзина </h3>
-        <div>
-          <h5 className="js-total">
-            Стоимость заказа
-            <p className="js-totalPrice" />
-            {' '}
-            руб.
-          </h5>
-          <button type="button" className="btn btn-outline-primary order-make ">
-            Оформить заказ
-          </button>
-        </div>
-
-        <div className="card mb-3" style={{ maxWidth: '540px' }}>
-          <div className="row g-0z ">
-            <div className="col-md-4 ">
-              <img src="#" className="img-fluid rounded-start" alt="..." />
+    <Layout 
+    mur={mur}
+    total = {total}
+    allSock = {allSock}
+    myBasket = {myBasket}
+    >
+{myBasket.length ?(
+<div className="container mb-4">
+    <div className="row">
+        <div className="col-12">
+            <div className="table-responsive">
+                <table className="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Товар</th>
+                            <td></td>
+                            <th scope="col" className="text-center">Количество</th>
+                            <th scope="col" className="text-right">Цена</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {allSock?.map((el)=>(
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
+                            <td>Product Name Dada</td>
+                            <td></td>
+                            <td><input className="form-control" type="text" value="1" /></td>
+                            <td className="text-right">{el['Sock.price']} руб.</td>
+                            <td className="text-right"><button className="btn btn-sm btn-danger"><i className="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        ))}
+                        
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Итого:</td>
+                            <td className="text-right">{total} руб.</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
             </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <h5 className="card-title">
-                  Цена
-
-                  {' '}
-                  руб.
-                </h5>
-
-                <p className="card-text">название</p>
-                <p className="card-text">
-                  колличество в корзине
-                  <p className="counter">колличество</p>
-                </p>
-                <div
-                  className="btn-group-vertical"
-                  role="group"
-                  aria-label="Vertical button group"
-                >
-                  <p className="info" />
-                  <button
-                    type="button"
-                    className="btn btn-success p-2 border btnPlus-data"
-                  >
-                    +
-
-                    {' '}
-                    добавить товар
-                  </button>
-
-                  <button
-                    type="button"
-                    className="btn btn-warning p-2 border btnMinus"
-                  >
-                    -
-
-                    {' '}
-                    убрать товар
-                  </button>
+        </div>
+        <div className="col mb-2">
+            <div className="row">
+                <div className="col-sm-12 col-md-6 text-right">
+                    <button className="btn btn-lg btn-block btn-success text-uppercase">Оплатить</button>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-
-      </div>
+    </div>
+</div>
+):(
+    <div>
+        <h3>🧺 Ваша корзина грустит без покупок!</h3>
+    </div>
+)}
 
     </Layout>
   );
