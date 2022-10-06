@@ -16,6 +16,7 @@ const BasketRoutes = require('./src/routes/BasketRoutes');
 const PersonalRouter = require('./src/routes/PersonalAccRoutes');
 const UserRouter = require('./src/routes/UserRoutes');
 const UserAut = require('./src/routes/UserAutRout');
+const SocksGenerate = require('./src/routes/Generate');
 
 const { SESSION_SECRET } = process.env;
 
@@ -47,6 +48,7 @@ app.use('/basket', BasketRoutes);
 app.use('/personal', PersonalRouter);
 app.use('/user', UserRouter);
 app.use('/user', UserAut);
+app.use('/', SocksGenerate);
 
 
 const PORT = process.env.PORT || 3001;

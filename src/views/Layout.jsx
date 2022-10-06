@@ -25,7 +25,7 @@ function Layout({ children, mur }) {
                 <div className="navbar-nav"> */}
                   <ul className="nav justify-content-end">
                    {mur?( <><li className="nav-item">
-                  <a className="nav-link" href="#">Генератор носков</a>
+                  <a className="nav-link" href="/gener">Генератор носков</a>
                 </li><li className="nav-item">
                     <a className="nav-link" href="#">Избранное</a>
                   </li><li className="nav-item">
