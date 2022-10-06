@@ -19,11 +19,12 @@ router.post('/aut', async (req, res) => {
       const passChek = await bcrypt.compare(password, user.password);
       if (passChek) {
         req.session.mur = user.name;
+        req.session.user_id = user.id;
         req.session.save(() => {
           res.json({err: 'ok'});
         });
       }else{
-        res.redirect('/user/aut');
+        res.json({err: 'не верный пароль'});
       }
     } else {
       res.json({err:"Я тя затролел))))"});
