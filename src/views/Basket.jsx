@@ -2,7 +2,6 @@ const React = require('react');
 const Layout = require('./Layout');
 
 function Basket({mur, total, allSock, myBasket}) {
-    console.log(Boolean(myBasket));
   return (
     <Layout 
     mur={mur}

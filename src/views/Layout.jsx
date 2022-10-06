@@ -27,7 +27,7 @@ function Layout({ children, mur }) {
                    {mur?( <><li className="nav-item">
                   <a className="nav-link" href="#">Генератор носков</a>
                 </li><li className="nav-item">
-                    <a className="nav-link" href="#">Избранное</a>
+                    <a className="nav-link" href="/favorite">Избранное</a>
                   </li><li className="nav-item">
                     <a className="nav-link" href="/personal">Личный кабинет</a>
                   </li><li className="nav-item">
@@ -74,7 +74,7 @@ function Layout({ children, mur }) {
                     Быстрые ссылки
                   </h6>
                   <p>
-                    <a href="#!" className="text-reset">Избранное</a>
+                    <a href="/favorite" className="text-reset">Избранное</a>
                   </p>
                   <p>
                     <a href="/personal" className="text-reset">Личный кабинет</a>
