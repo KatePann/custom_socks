@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "admin",
-    "password": "admin",
+    "username": "mia",
+    "password": "123",
     "database": "socks2022",
     "host": "127.0.0.1",
     "dialect": "postgres"
