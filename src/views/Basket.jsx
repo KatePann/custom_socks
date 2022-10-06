@@ -33,7 +33,7 @@ function Basket({mur, total, allSock, myBasket}) {
                             <td></td>
                             <td><input className="form-control" type="text" value="1" /></td>
                             <td className="text-right">{el['Sock.price']} руб.</td>
-                            <td className="text-right"><button className="btn btn-sm btn-danger"><i className="fa fa-trash"></i> </button> </td>
+                            <td className="text-right"><a href={`/deleteBas/${el.id}`}><button className="btn btn-sm btn-danger"><i className="fa fa-trash"></i></button></a> </td>
                         </tr>
                         ))}
                         

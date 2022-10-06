@@ -15,7 +15,7 @@ function Favorites({  mur, myFavor, allSockFav}) {
             <a href="#!">
               <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)'  }}></div>
             </a>
-            <a class="btn btn-primary" href="" role="button">Удалить</a>
+            <a class="btn btn-primary" href={`/deleteFav/${el.id}`} role="button">Удалить</a>
           </div>
           ))}
           <br />

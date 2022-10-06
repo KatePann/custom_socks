@@ -17,6 +17,8 @@ const PersonalRouter = require('./src/routes/PersonalAccRoutes');
 const UserRouter = require('./src/routes/UserRoutes');
 const UserAut = require('./src/routes/UserAutRout');
 const FavoritesRoutes = require('./src/routes/FavoritesRoutes');
+const DeleteFavRoutes = require('./src/routes/deleteFavRoutes');
+const deleteBasRoutes = require('./src/routes/deleteBasRoutes');
 
 const { SESSION_SECRET } = process.env;
 
@@ -49,6 +51,8 @@ app.use('/personal', PersonalRouter);
 app.use('/user', UserRouter);
 app.use('/user', UserAut);
 app.use('/favorite', FavoritesRoutes);
+app.use('/deleteFav', DeleteFavRoutes);
+app.use('/deleteBas', deleteBasRoutes);
 
 
 const PORT = process.env.PORT || 3001;
