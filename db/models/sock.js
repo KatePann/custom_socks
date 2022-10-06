@@ -11,9 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({ Basket, Favorites, Order }) {
       // define association here
-      this.belongsTo(Basket, { foreignKey: 'Socks_id' });
-      this.belongsTo(Favorites, { foreignKey: 'Socks_id' });
-      this.belongsTo(Order, { foreignKey: 'Socks_id' });
+      this.hasMany(Basket, { foreignKey: 'socks_id' });
+      this.hasMany(Favorites, { foreignKey: 'socks_id' });
+      this.hasMany(Order, { foreignKey: 'socks_id' });
     }
   }
   Sock.init({

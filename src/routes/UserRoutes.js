@@ -18,6 +18,7 @@ router.post('/reg', async (req, res) => {
       name, surname, patronymic, phone_number: Number(phone), email, home_adress: adress, password,
     });
     req.session.mur = newUs.name;
+    req.session.user_id = newUs.dataValues.id;
     req.session.save(() => {
       res.redirect('/');
     });

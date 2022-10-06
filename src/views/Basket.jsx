@@ -1,91 +1,70 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Basket() {
+function Basket({mur, total, allSock, myBasket}) {
+    console.log(Boolean(myBasket));
   return (
-    <Layout>
-
-<div class="container mb-4">
-    <div class="row">
-        <div class="col-12">
-            <div class="table-responsive">
-                <table class="table table-striped">
+    <Layout 
+    mur={mur}
+    total = {total}
+    allSock = {allSock}
+    myBasket = {myBasket}
+    >
+{myBasket.length ?(
+<div className="container mb-4">
+    <div className="row">
+        <div className="col-12">
+            <div className="table-responsive">
+                <table className="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col"> </th>
                             <th scope="col">Товар</th>
                             <td></td>
-                            <th scope="col" class="text-center">Количество</th>
-                            <th scope="col" class="text-right">Цена</th>
+                            <th scope="col" className="text-center">Количество</th>
+                            <th scope="col" className="text-right">Цена</th>
                             <th> </th>
                         </tr>
                     </thead>
                     <tbody>
+                        {allSock?.map((el)=>(
                         <tr>
                             <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
                             <td>Product Name Dada</td>
                             <td></td>
-                            <td><input class="form-control" type="text" value="1" /></td>
-                            <td class="text-right">124,90 €</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
+                            <td><input className="form-control" type="text" value="1" /></td>
+                            <td className="text-right">{el['Sock.price']} руб.</td>
+                            <td className="text-right"><button className="btn btn-sm btn-danger"><i className="fa fa-trash"></i> </button> </td>
                         </tr>
-                        <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Toto</td>
-                            <td></td>
-                            <td><input class="form-control" type="text" value="1" /></td>
-                            <td class="text-right">33,90 €</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Titi</td>
-                            <td></td>
-                            <td><input class="form-control" type="text" value="1" /></td>
-                            <td class="text-right">70,00 €</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-                        </tr>
+                        ))}
+                        
                         <tr>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>Итого:</td>
-                            <td class="text-right">255,90 €</td>
+                            <td className="text-right">{total} руб.</td>
                         </tr>
-                        {/* <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>Shipping</td>
-                            <td class="text-right">6,90 €</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><strong>Total</strong></td>
-                            <td class="text-right"><strong>346,90 €</strong></td>
-                        </tr> */}
+                       
                     </tbody>
                 </table>
             </div>
         </div>
-        <div class="col mb-2">
-            <div class="row">
-                {/* <div class="col-sm-12  col-md-6">
-                    <button class="btn btn-block btn-light">Continue Shopping</button>
-                </div> */}
-                <div class="col-sm-12 col-md-6 text-right">
-                    <button class="btn btn-lg btn-block btn-success text-uppercase">Оплатить</button>
+        <div className="col mb-2">
+            <div className="row">
+                <div className="col-sm-12 col-md-6 text-right">
+                    <button className="btn btn-lg btn-block btn-success text-uppercase">Оплатить</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+):(
+    <div>
+        <h3>🧺 Ваша корзина грустит без покупок!</h3>
+    </div>
+)}
 
     </Layout>
   );
