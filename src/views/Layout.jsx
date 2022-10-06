@@ -12,8 +12,7 @@ function Layout({ children, mur }) {
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossOrigin="anonymous" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
         {/* подключаем css файлы */}
-        <link rel="stylesheet" href="../../css/index.css" />
-
+        <link rel="stylesheet" href="/css/index.css" />
         <title>Castom socks</title>
       </head>
       <body>
