@@ -11,7 +11,7 @@ function Favorites({  mur, myFavor, allSockFav}) {
         <br />
         {myFavor?.map((el)=>(
           <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" className="img-fluid" style={{ maxWidth: '30%'  }}/>
+            <img src="https://myfriday.ru/upload/iblock/b84/b84f46a3ba7e1af276e85b6c4f5a3662.jpg" className="img-fluid" style={{ maxWidth: '30%'  }}/>
             <a href="#!">
               <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)'  }}></div>
             </a>

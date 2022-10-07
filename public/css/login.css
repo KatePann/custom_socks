@@ -1,0 +1,15 @@
+.socks{
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#color{
+    
+    justify-content: center;
+}
+
+#change-color{
+   margin: 10px;
+}

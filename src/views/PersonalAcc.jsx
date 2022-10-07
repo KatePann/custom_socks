@@ -75,12 +75,22 @@ function Personal({ mur,myUser }) {
               </div>
             </div>
             <hr/>
+
+            
+
             <div className="row">
               <div className="col-sm-3">
                 <p className="mb-0">Адрес</p>
               </div>
               <div className="col-sm-9">
                 <p className="text-muted mb-0">{myUser.home_adress}</p>
+              </div>
+            </div>
+            <hr/>
+            <div className="row">
+              
+              <div className="col-sm-9">
+              <a className="nav-link" href="/chat">Чат с консультантом</a>
               </div>
             </div>
           </div>
@@ -90,6 +100,7 @@ function Personal({ mur,myUser }) {
     </div>
   </div>
 </section>
+
 
     </Layout>
   );

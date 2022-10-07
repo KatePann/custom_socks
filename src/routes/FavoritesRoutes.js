@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
       user_id, mur, myFavor, allSockFav,
     }, res);
   } catch (error) {
-    res.send(`Error ---456---> ${error}`);
+    res.send(`Error ---789---> ${error}`);
   }
 });
 

@@ -5,15 +5,25 @@ module.exports = function Generate ({ mur }) {
 console.log(mur);
 return(
 <Layout mur={mur}>
+
 <script defer src="/js/her.js"></script>
-{/* <link rel="stylesheet" href="/css/login.css" />  */}
+<script defer src="/js/socks.js"></script>
+
+
+<form className="Deni" method="POST"  action="/gener">
+<link rel="stylesheet" href="/css/login.css" /> 
 <div className ='socks'>
-<img src='/public/pic/1.png'></img> </div>
+<img width = "700px"
+    height = "700px" src='/pic/pngwing_com.png'></img> </div>
 
-<input id="color" list="colors"/>
-
-<button className="change-color">Change Color</button>
-
+<input name="color" id="color" list="colors"/>
+<button type="button" className="btn btn-outline-primary" id="change-color" >Цвет носка</button>
+{/* <button className="change-color">Change Color</button> */}
+<input name="print" id="print" list="prints"/>
+<button type="button" className="btn btn-outline-primary" id="change-print" >Принт</button>
+<br />
+<button type="submit" className="btn btn-outline-success" id="bask" >Сохранить</button>
+{/* <button type="submit" className="btn btn-outline-success" id="fav" >В избранное</button> */}
 <datalist id="colors">
 <option value="AliceBlue"/>
 <option value="AntiqueWhite"/>
@@ -33,5 +43,15 @@ return(
 <option value="Chocolate"/>
 <option value="Coral"></option>
 </datalist>
+
+<datalist id="prints">
+<option value = "1">Лягушечка
+</option><option value = "2">Ляг
+</option><option value = "3">Лягуш
+</option>
+</datalist> 
+
+
+</form>
 </Layout>
-)}
+)} 

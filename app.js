@@ -1,5 +1,5 @@
 require('dotenv').config(); // реквайрим .env
-
+const ws = require('ws')
 // Внешние импорты
 const path = require('path'); // подключаем css
 const express = require('express');
@@ -20,6 +20,7 @@ const FavoritesRoutes = require('./src/routes/FavoritesRoutes');
 const DeleteFavRoutes = require('./src/routes/deleteFavRoutes');
 const deleteBasRoutes = require('./src/routes/deleteBasRoutes');
 const SocksGenerate = require('./src/routes/Generate');
+const Chat = require('./src/views/Chat')
 
 const { SESSION_SECRET } = process.env;
 
@@ -73,12 +74,42 @@ app.get('/logout', (req, res) => { // делаем логаут
   }
 });
 
-app.listen(PORT, async () => {
+app.get('/chat', (req, res) => {
+  renderTemplate(Chat, null, res);
+})
+
+const httpServer = app.listen(PORT, async () => {
   try {
     await sequelize.authenticate();
     console.log('Соединение с базой установлено!');
   } catch (err) {
     console.log(err, 'Error!');
   }
-  console.log(`Сервер поднят на ${PORT} порту!`);
+  console.log('Сервер поднят на ${PORT} порту!');
 });
+
+// WS соединение для чата 
+const wsServer = new ws.WebSocketServer({ server: httpServer })
+// * 6 создаём EventEmitter - аналог EventListener'a, только на серве
+wsServer.on('connection', (client) => {
+  console.log('wsServer подключён!')
+  client.on('message', (data) => {
+    const utfMessage = data.toString('utf-8');
+    console.log(utfMessage)
+    client.send(utfMessage + ' И тебе привет с серва!')
+  })
+})
+
+// * 12 Создаём новое соединение для чата
+wsServer.on('connection', (currentClient) => {
+  currentClient.on('message', (data) => {
+    const utfMessage = data.toString('utf-8');
+    const jsonMess = JSON.parse(utfMessage)
+    jsonMess.clientSize = wsServer.clients.size
+    console.log(jsonMess)
+    // * 13 отправка на фронт сообщения от конкретного клиента
+    wsServer.clients.forEach((oneClient) => {
+      oneClient.send(JSON.stringify(jsonMess))
+    })
+  })
+})

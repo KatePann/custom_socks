@@ -28,9 +28,11 @@ function Layout({ children, mur }) {
                   <a className="nav-link" href="/gener">Генератор носков</a>
                 </li><li className="nav-item">
                     <a className="nav-link" href="/favorite">Избранное</a>
-                  </li><li className="nav-item">
+                  </li>
+                  <li className="nav-item">
                     <a className="nav-link" href="/personal">Личный кабинет</a>
-                  </li><li className="nav-item">
+                  </li>
+                  <li className="nav-item">
                     <a className="nav-link" href="/basket">Корзина</a>
                   </li><li className="nav-item">
                     <a className="nav-link" href="/logout">Выход</a>
