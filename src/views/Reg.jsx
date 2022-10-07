@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 module.exports = function Reg( ) {
   return (
     <Layout>
-      <form method="POST" action="/user/reg">
+      <form className="Den" method="POST" action="/user/reg" style={{ maxWidth: '30%'  }}>
         <div className="mb-3">
           <label htmlFor="exampleInputName" className="form-label">Name</label>
           <input name="name" type="name" className="form-control" id="exampleInputName" />
@@ -35,8 +35,10 @@ module.exports = function Reg( ) {
           <input name="password" type="password" className="form-control" id="exampleInputPassword1" />
         </div>
 
-        <button type="submit" className="btn btn-primary">Reg</button>
+        <button type="submit" className="btn btn-primary">Зарегистрироваться</button>
       </form>
+      <br />
+      <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" /> 
     </Layout>
   );
 };

@@ -17,3 +17,11 @@ footer {
   height: 60px;
   
 }
+
+#carouselExampleIndicators{
+  display: block; margin: 0 auto;
+}
+
+.Den{
+  display: block; margin: 0 auto;
+}

@@ -29,7 +29,7 @@ function Basket({mur, total, allSock, myBasket}) {
                         {allSock?.map((el)=>(
                         <tr>
                             <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Dada</td>
+                            <td>Castom socks</td>
                             <td></td>
                             <td><input className="form-control" type="text" value="1" /></td>
                             <td className="text-right">{el['Sock.price']} руб.</td>
@@ -60,7 +60,7 @@ function Basket({mur, total, allSock, myBasket}) {
     </div>
 </div>
 ):(
-    <div>
+    <div >
         <h3>🧺 Ваша корзина грустит без покупок!</h3>
     </div>
 )}
