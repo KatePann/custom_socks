@@ -27,20 +27,20 @@ function Home({ mur }) {
           </div> */}
           
           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style={{ maxWidth: '50%' }}>
-  <div class="carousel-indicators">
+  <div class="carousel-indicators" >
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner"style={{ width: '550px' }}>
     <div class="carousel-item active">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="d-block w-100" alt="..."/>
+      <img src="https://m.godesigner.ru/solutions/4/42/42e/42efd0b5bb077b3a1dc8e8050c4d50e5_gallerySiteSize.jpg" class="d-block w-100" alt="..."/>
     </div>
     <div class="carousel-item">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="d-block w-100" alt="..."/>
+      <img src="https://m.godesigner.ru/solutions/6/62/625/625adc43f0ae61867fab572209b16a2f_gallerySiteSize.jpg" class="d-block w-100" alt="..."/>
     </div>
     <div class="carousel-item">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="d-block w-100" alt="..."/>
+      <img src="https://static.tildacdn.com/tild3339-3130-4438-a432-393933356265/__4_-2.jpg" class="d-block w-100" alt="..."/>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
